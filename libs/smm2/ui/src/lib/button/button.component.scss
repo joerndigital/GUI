@@ -1,0 +1,36 @@
+:host {
+  --background-color: var(--smm2-button-background-color);
+  --font-color: var(--smm2-button-font-color);
+  --background-color-active: var(--smm2-button-background-color-active);
+  --font-color-active: var(--smm2-button-font-color-active);
+  --font-size: var(--smm2-button-font-size);
+
+  color-scheme: only light;
+  display: block;
+  position: relative;
+  cursor: pointer;
+
+  background-color: var(--background-color);
+  border-radius: 0.25rem;
+  border: none;
+  outline: transparent;
+
+  padding: 0.7rem 0.5rem 0.6rem;
+  box-shadow: 0 4px 1px 0 rgb(0 0 0 / 18%);
+
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: var(--font-size);
+  font-style: normal;
+  font-weight: 700;
+  color: var(--font-color);
+
+  &:focus,
+  &:hover {
+    box-shadow: 0 4px 1px 0 rgb(0 0 0 / 24%);
+  }
+
+  &:active {
+    background-color: var(--background-color-active);
+    color: var(--font-color-active);
+  }
+}

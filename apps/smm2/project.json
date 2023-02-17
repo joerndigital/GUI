@@ -17,6 +17,9 @@
         "inlineStyleLanguage": "scss",
         "assets": ["apps/smm2/src/favicon.ico", "apps/smm2/src/assets"],
         "styles": ["apps/smm2/src/styles.scss"],
+        "stylePreprocessorOptions": {
+          "includePaths": ["lib/smm2/ui/src/lib/styles"]
+        },
         "scripts": []
       },
       "configurations": {

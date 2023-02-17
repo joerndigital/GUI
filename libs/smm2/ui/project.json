@@ -1,0 +1,80 @@
+{
+  "name": "smm2-ui",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/smm2/ui/src",
+  "prefix": "smm2",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/smm2/ui/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/smm2/ui/**/*.ts", "libs/smm2/ui/**/*.html"]
+      }
+    },
+    "component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/smm2/ui/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "smm2:build"
+      }
+    },
+    "cypress-open": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "watch": true,
+        "cypressConfig": "libs/smm2/ui/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "smm2:build"
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "libs/smm2/ui/.storybook",
+        "browserTarget": "smm2-ui:build-storybook",
+        "compodoc": false,
+        "styles": ["libs/smm2/ui/src/styles"]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/smm2-ui",
+        "configDir": "libs/smm2/ui/.storybook",
+        "browserTarget": "smm2-ui:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  },
+  "tags": ["scope:smm2", "angular", "type:ui"]
+}
