@@ -1,0 +1,13 @@
+<ul class="list">
+  <li *ngFor="let item of items" class="list-item" [ngClass]="item.type ?? 'string'">
+    <ng-container [ngSwitch]="item.type">
+      <ng-container *ngSwitchCase="'time'">
+        <fa-icon [icon]="item.icon" size="lg"></fa-icon
+        ><span smm2Timestamp>{{ item.label }}</span>
+      </ng-container>
+      <ng-container *ngSwitchDefault>
+        <fa-icon [icon]="item.icon" size="lg"></fa-icon>{{ item.label }}
+      </ng-container>
+    </ng-container>
+  </li>
+</ul>

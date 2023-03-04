@@ -1,0 +1,26 @@
+li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  fa-icon {
+    font-size: 16px;
+    width: 24px;
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  font-size: 1.25em;
+  font-weight: 500;
+  line-height: 1.5em;
+  padding-bottom: 0.25rem;
+}
+
+.number {
+  font-family: 'Chakra Petch', sans-serif;
+}

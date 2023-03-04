@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@gui/smm2/ui": ["libs/smm2/ui/src/index.ts"]
+      "@gui/smm2/ui": ["libs/smm2/ui/src/index.ts"],
+      "@gui/smm2/utils": ["libs/smm2/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
