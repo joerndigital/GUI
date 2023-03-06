@@ -1,15 +1,14 @@
 <section class="content">
   <header class="content-header">
-
-      <h2 class="content-headline title"><fa-icon [icon]="faSignsPost" size="lg"></fa-icon>Hi</h2>
-      <h2 class="content-headline clears">Clears: <span class="counter">0</span></h2>
+      <h2 class="content-headline title"><fa-icon [icon]="faSignsPost" size="lg"></fa-icon>{{ title }}</h2>
+      <h2 class="content-headline clears">Clears: <span class="counter">{{ clears }}</span></h2>
   </header>
   <section class="body">
     <p class="description">
-      Surface of a Lone Wolf
+      {{ description }}
     </p>
-    <h3 class="subheadline title"><fa-icon [icon]="faUser" size="lg"></fa-icon>Person</h3>
-    <h3 class="subheadline title"><fa-icon [icon]="faFlagCheckered" size="lg"></fa-icon>No clear condition set.</h3>
+    <h3 class="subheadline title"><fa-icon [icon]="faUser" size="lg"></fa-icon>{{ user }}</h3>
+    <h3 class="subheadline title"><fa-icon [icon]="faFlagCheckered" size="lg"></fa-icon>{{ clearCondition }}</h3>
     <smm2-list [items]="listItems"></smm2-list>
 
   </section>
