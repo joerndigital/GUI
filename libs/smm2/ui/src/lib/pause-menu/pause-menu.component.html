@@ -9,8 +9,7 @@
     </p>
     <h3 class="subheadline title"><fa-icon [icon]="faUser" size="lg"></fa-icon>{{ user }}</h3>
     <h3 class="subheadline title"><fa-icon [icon]="faFlagCheckered" size="lg"></fa-icon>{{ clearCondition }}</h3>
-    <smm2-list [items]="listItems"></smm2-list>
-
+    <ng-content select="smm2-list"></ng-content>
   </section>
 </section>
 

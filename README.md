@@ -16,3 +16,7 @@ From a lot of games, I'm excited about the UI, so I set out to recreate a few el
 - [ ] Vue
 - [ ] React
 - [ ] Svelte
+
+
+## TODO 
+Sidenav auslagern im Pause Menu
