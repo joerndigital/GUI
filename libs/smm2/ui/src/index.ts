@@ -7,4 +7,6 @@ export * from './lib/list/list.component';
 
 export * from './lib/pause-menu/pause-menu.component';
 
+export * from './lib/sidenav/sidenav.component';
+
 export * from './lib/timestamp/timestamp.directive';
